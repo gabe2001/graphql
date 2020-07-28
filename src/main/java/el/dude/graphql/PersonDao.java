@@ -43,4 +43,19 @@ public class PersonDao
 	{
 		persons.add(0, person);
 	}
+
+	public Person getPerson(String id)
+	{
+		return persons.stream().filter(p -> id.equals(p.getId())).findFirst().orElse(null);
+	}
+
+	public Person deletePerson(String id)
+	{
+		Person deleted = getPerson(id);
+		if (deleted == null)
+		{
+			return null;
+		}
+		return (persons.remove(deleted)) ? deleted : null;
+	}
 }

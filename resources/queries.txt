@@ -18,6 +18,14 @@ mutation AddThreeYearOld {
   }
 }
 
+mutation DeletePerson($id: ID!) {
+  deletePerson(id: $id) {
+    id
+    name
+    age
+  }
+}
+
 query List {
   list {
     id

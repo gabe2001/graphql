@@ -27,4 +27,10 @@ public class Mutation implements GraphQLMutationResolver
 		personDao.addPerson(person);
 		return person;
 	}
+
+	public Person deletePerson(String id)
+	{
+		return personDao.deletePerson(id);
+	}
+
 }
