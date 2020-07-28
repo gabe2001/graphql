@@ -24,6 +24,11 @@ public class PersonDao
 		return persons.stream().max(Comparator.comparing(Person::getAge)).orElseThrow(NoSuchElementException::new);
 	}
 
+	public Person getYoungestPerson()
+	{
+		return persons.stream().min(Comparator.comparing(Person::getAge)).orElseThrow(NoSuchElementException::new);
+	}
+
 	public List<Person> list()
 	{
 		return persons;

@@ -32,4 +32,9 @@ public class Query implements GraphQLQueryResolver
 	{
 		return personDao.getOldestPerson();
 	}
+
+	public Person getYoungest()
+	{
+		return personDao.getYoungestPerson();
+	}
 }

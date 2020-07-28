@@ -8,6 +8,7 @@ type Person {
 
 type Query {
     oldest: Person!
+    youngest: Person!
     list: [Person]!
     listByAge(age: Int!): [Person]!
 }

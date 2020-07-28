@@ -1,0 +1,51 @@
+mutation AddPerson {
+  addPerson(name: "Atila", age: 42) {
+    id
+    name
+    age
+  }
+}
+
+mutation AddAnohterPerson {
+  addPerson(name: "Bambi", age: 3) {
+    id
+  }
+}
+
+mutation AddThreeYearOld {
+  addPerson(name: "ThreeYearOlds", age: 3) {
+    id
+  }
+}
+
+query List {
+  list {
+    id
+    name
+    age
+  }
+}
+
+query ListByAge($age: Int = 42) {
+  listByAge(age: $age) {
+    id
+    name
+    age
+  }
+}
+
+query Oldest {
+  oldest {
+    id
+    name
+    age
+  }
+}
+
+query Youngest {
+  youngest {
+    id
+    name
+    age
+  }
+}
