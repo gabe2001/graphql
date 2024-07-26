@@ -42,6 +42,14 @@ query ListByAge($age: Int = 42) {
   }
 }
 
+query ListThreeYearOlds($age: Int = 3) {
+  listByAge(age: $age) {
+    id
+    name
+    age
+  }
+}
+
 query Oldest {
   oldest {
     id
